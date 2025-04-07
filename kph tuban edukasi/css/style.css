@@ -1,0 +1,123 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Mencegah scroll */
+}
+
+/* Pastikan kontennya tetap di atas overlay */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  position: absolute; /* Ubah dari fixed ke absolute */
+  bottom: 0;
+  width: 100%;
+  line-height: 0px; /* Pusatkan teks secara vertikal */
+}
+
+.hero .container {
+  margin-top: -250px; /* Geser elemen ke atas */
+}
+
+.container h1{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+}
+
+#teks-bawah {
+  display: block;
+  margin-top: -20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  color: whitesmoke;
+  
+}
+
+/* tambahan */
+
+/* Navbar Styling */
+.navbar {
+  background: linear-gradient(to bottom, #2c3e50, #4b8e8d);
+}
+
+/* Section Backgrounds */
+#vision, #new-section {
+  background: linear-gradient(to bottom, #ffffff 90%, #009933 100%);
+  min-height: 100vh;
+}
+
+/* Headings */
+h3 {
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+}
+
+/* Paragraphs */
+p {
+  text-align: left;
+  font-size: 16px;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, 'Times New Roman', serif;
+}
+
+
+    /* Styling untuk logo di pojok kiri atas */
+.logo-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 40px;
+  z-index: 2;
+}
+
+/* Styling untuk logo di pojok kanan atas */
+.logo-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 50px;
+  z-index: 2;
+}
+
+/* Media Queries untuk layar kecil */
+@media (max-width: 768px) {
+  .logo-left,
+  .logo-right {
+    height: 30px; /* Perkecil ukuran logo */
+    top: 5px; /* Sesuaikan jarak dari atas */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-left,
+  .logo-right {
+    height: 25px; /* Perkecil lebih jauh untuk layar sangat kecil */
+    top: 5px;
+  }
+}
+
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  h3 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .navbar-brand span {
+    font-size: 18px;
+  }
+}
