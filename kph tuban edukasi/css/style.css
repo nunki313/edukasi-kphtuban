@@ -1,123 +1,126 @@
+/* Import Font Modern 'Poppins' dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 html, body {
-  height: 100%;
   margin: 0;
-  overflow: hidden; /* Mencegah scroll */
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  /* overflow: hidden; DIHAPUS agar halaman bisa di-scroll */
 }
-
-/* Pastikan kontennya tetap di atas overlay */
-.hero > * {
-  position: relative;
-  z-index: 1;
-}
-
-.container {
-  max-width: 1200px;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  font-size: 14px;
-  position: absolute; /* Ubah dari fixed ke absolute */
-  bottom: 0;
-  width: 100%;
-  line-height: 0px; /* Pusatkan teks secara vertikal */
-}
-
-.hero .container {
-  margin-top: -250px; /* Geser elemen ke atas */
-}
-
-.container h1{
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 50px;
-}
-
-#teks-bawah {
-  display: block;
-  margin-top: -20px;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 25px;
-  color: whitesmoke;
-  
-}
-
-/* tambahan */
 
 /* Navbar Styling */
 .navbar {
-  background: linear-gradient(to bottom, #2c3e50, #4b8e8d);
+  background: linear-gradient(135deg, #2c3e50, #4b8e8d) !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.navbar-brand span {
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 /* Section Backgrounds */
-#vision, #new-section {
-  background: linear-gradient(to bottom, #ffffff 90%, #009933 100%);
+.content-section {
+  /* Gradasi hijau yang lebih lembut dan modern */
+  background: linear-gradient(to bottom, #ffffff 40%, #e8f5e9 100%);
+  padding: 80px 0;
+  position: relative;
   min-height: 100vh;
 }
 
 /* Headings */
-h3 {
-  color: black;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 40px;
+.article-title {
+  color: #1a252f;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  margin-top: 40px; /* Memberi ruang agar tidak tertutup logo */
 }
 
 /* Paragraphs */
-p {
-  text-align: left;
-  font-size: 16px;
-  color: black;
-  font-family: Cambria, Cochin, Georgia, 'Times New Roman', serif;
+.article-text {
+  text-align: justify;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }
 
+/* Image Styling (Modern & Elegan) */
+.article-img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 30px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
 
-    /* Styling untuk logo di pojok kiri atas */
+/* Efek hover pada gambar */
+.article-img:hover {
+  transform: translateY(-5px);
+}
+
+/* Styling untuk logo di pojok kiri dan kanan atas */
+.logo-left, .logo-right {
+  position: absolute;
+  top: 20px;
+  z-index: 2;
+}
+
 .logo-left {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  height: 40px;
-  z-index: 2;
-}
-
-/* Styling untuk logo di pojok kanan atas */
-.logo-right {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  left: 20px;
   height: 50px;
-  z-index: 2;
 }
 
-/* Media Queries untuk layar kecil */
-@media (max-width: 768px) {
-  .logo-left,
-  .logo-right {
-    height: 30px; /* Perkecil ukuran logo */
-    top: 5px; /* Sesuaikan jarak dari atas */
-  }
+.logo-right {
+  right: 20px;
+  height: 60px;
 }
 
-@media (max-width: 480px) {
-  .logo-left,
-  .logo-right {
-    height: 25px; /* Perkecil lebih jauh untuk layar sangat kecil */
-    top: 5px;
-  }
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #2c3e50, #4b8e8d) !important;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 15px;
+  width: 100%;
 }
 
+footer p {
+  margin: 0;
+  color: white;
+}
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
-  h3 {
-    font-size: 28px;
+  .article-title {
+    font-size: 26px;
+    margin-top: 50px;
   }
-  p {
-    font-size: 14px;
+  .article-text {
+    font-size: 16px;
+    text-align: left; /* Rata kiri lebih baik untuk baca di HP */
   }
   .navbar-brand span {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .logo-left {
+    height: 35px;
+    left: 10px;
+    top: 15px;
+  }
+  .logo-right {
+    height: 40px;
+    right: 10px;
+    top: 15px;
+  }
+  .content-section {
+    padding: 50px 0;
   }
 }
